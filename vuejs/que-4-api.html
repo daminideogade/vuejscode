@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Call API</title>
+</head>
+<body>
+	<script>
+		// function apidata(){
+		// fetch('www.example.com/api/get/1')
+		// .then((api) => {
+		// 	return api.json();
+		// }) .then(example => {
+		// 	console.log(example);
+		// });
+		// }
+		// apidata();
+
+		async function getapi(){
+			let res = await fetch('www.example.com/api/get/1');
+			let data =  await res.json()
+			return data;
+		}	
+		getapi().then(data => console.log(data));
+	</script>
+
+</body>
+</html>
